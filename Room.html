@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS Link -->
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="Static/CSS/main.css">
+        <link rel="icon" href="Static/Pictures/icons8-study-96.png"/>
+        <!-- Room CSS -->
+        <link rel="stylesheet" href="Static/CSS/Room.css">
+        <!-- Icons Link -->
+        <link rel="stylesheet" href="Static/fontawesomeoffline/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <title>HTML, CSS, JS</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div>
+                    <a href="index.html">
+                        <h2 class="log"><img src="Static/Pictures/icons8-study-96.png" alt="">CollaboraLearn</h2>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="search" placeholder="Search for peers...">
+                </div>
+                <div class="create">
+                    <div class="nav-profile" onclick="toggle()">
+                        <div class="profile-pic">
+                            <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt=""></a>
+                        </div>
+                        <p>Username <span>@username</span></p>
+                        <i class="fa-solid fa-angle-down "></i>
+                    </div>
+
+                    <ul class="profile-dropdown-list">
+                        
+                        <li class="profile-dropdown-list-item">
+                            <a href="Profile.html">
+                                <i class="fa-regular fa-user"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+                        <hr>
+                        <li class="profile-dropdown-list-item">
+                            <a href="LoginPage.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Main Room Page -->
+        <main>
+            <div class="room-container">
+                <!-- Room Main -->
+                <div class="room-main">
+                    <div class="room">
+                        <div class="room-top">
+                            <a href="index.html"><p><i class="fa-solid fa-circle-chevron-left"></i> Back</p></a>
+                            <span class="edit">
+                                <div class="dropdown">
+                                    <button id="dropdown-button"><i class="fa-solid fa-ellipsis"></i></button>
+                                    <div id="dropdown-content">
+                                        <a class="edit-button"><i class="fa-solid fa-edit"></i> Edit</a>
+                                        <a class="delete-button"><i class="fa-solid fa-trash-can delete"></i> Delete</a>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="room-header">
+                            <div class="room-headerinfo">
+                                 <h2>HTML, CSS, & JS</h2>
+                                <small>3 days ago</small>
+                            </div>
+                        </div>
+                        <div class="room-info">
+                            <div class="room-creator">
+                                <p>CREATED BY <span><a href="Profile.html">@username</a></span></p>
+                            </div>
+                            <div class="room-description">
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, rem. Pariatur, voluptate quas magnam laboriosam dolorem sed quisquam rem minima tenetur quia perferendis, ex inventore porro. Distinctio, sed ea. Tenetur debitis sequi maxime doloremque praesentium! Cum a adipisci exercitationem commodi molestias iusto error, ad enim! Aperiam quas reiciendis rerum, commodi saepe doloribus, accusamus doloremque reprehenderit suscipit distinctio voluptatibus, dicta voluptates.</span>
+                            </div>
+                            <div class="room-topic">
+                                <h4 class="btn btn-primary">Web Development</h4>
+                            </div>
+                        </div>
+                        <div class="room-messages">
+                            <div class="message">
+                                <div class="messageheader">
+                                    <div class="profile-pic">
+                                        <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt=""></a>
+                                    </div>
+                                    <p class="profile-username">@username</p>
+                                    <p class="delete-button">x</p>
+                                </div>
+
+                                <div class="messagebox">
+                                    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, qui!</span>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="messageheader">
+                                    <div class="profile-pic">
+                                        <a href="Profile.html"><img src="https://randomuser.me/api/portraits/women/30.jpg" alt=""></a>
+                                    </div>
+                                    <p class="profile-username">@username</p>
+                                    <p class="delete-button">x</p>
+                                </div>
+
+                                <div class="messagebox">
+                                    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, qui!</span>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="messageheader">
+                                    <div class="profile-pic">
+                                        <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/42.jpg" alt=""></a>
+                                    </div>
+                                    <p class="profile-username">@username</p>
+                                    <p class="delete-button">x</p>
+                                </div>
+
+                                <div class="messagebox">
+                                    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, qui!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room__message">
+                            <form action="#">
+                                <input type="text" placeholder="Write your message here..."/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Room Main -->
+                <!-- Room Right -->
+                <div class="room-right">
+                    <div class="members_header">
+                        <h4>Members</h4>
+                        <p>(<small># </small>Joined)</p>
+                    </div>
+                    <div class="members_name">
+                        <div class="members_namebox">
+                            <div class="nav-profile">
+                                <div class="profile-pic">
+                                    <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt=""></a>
+                                </div>
+                                <p>Username <span>@username</span></p>
+                            </div>
+                        </div>
+                        <div class="members_namebox">
+                            <div class="nav-profile">
+                                <div class="profile-pic">
+                                    <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt=""></a>
+                                </div>
+                                <p>Username <span>@username</span></p>
+                            </div>
+                        </div>
+                        <div class="members_namebox">
+                            <div class="nav-profile">
+                                <div class="profile-pic">
+                                    <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt=""></a>
+                                </div>
+                                <p>Username <span>@username</span></p>
+                            </div>
+                        </div>
+                        <div class="members_namebox">
+                            <div class="nav-profile">
+                                <div class="profile-pic">
+                                    <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt=""></a>
+                                </div>
+                                <p>Username <span>@username</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Room left -->
+            </div>
+        </main>
+        <div id="edit-modal" class="editmodal">
+            <div class="room-modal-content">
+                <div class="create-room-form">
+                    <h3>Update study room</h3>
+                    <form class="form" action="#">
+                        <div class="form__group">
+                            <label for="room_name">Room Name</label>
+                            <input id="room_name" name="room_name" type="text" placeholder="E.g. Web Development" />
+                        </div>
+                    </form>
+                    
+                    <div class="form__group">
+                        <label for="room_topic">Topic</label>
+                        <input required type="text" name="topic" id="room_topic" list="topic-list" />
+                        <datalist id="topic-list">
+                            <select id="room_topic">
+                                <option value="">Select your topic</option>
+                                <option value="Python">Python</option>
+                                <option value="Django">Django</option>
+                            </select>
+                        </datalist>
+                    </div>
+        
+        
+                    <div class="form__group">
+                        <label for="room_about">About</label>
+                        <textarea name="room_about" id="room_about" placeholder="Write about your study group..."></textarea>
+                    </div>
+                    <div class="form__action">
+                        <button class="btn btn-dark" id="cancel-edit"><a  href="index.html">Cancel</a></button>
+                        <button class="btn btn-primary" type="submit" id="confirm-edit">Update Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="delete-modal" class="deletemodal">
+            <div class="modal-content">
+                <div class="logoClosure">
+                    <i class="fa-regular fa-trash-can deletelogo"></i>
+                </div>
+                <p>Are you sure you want to delete this room?</p><hr>
+                <div class="delete__action">
+                    <button id="cancel-delete" class="modal-btn btn-dark">Cancel</button>
+                    <button id="confirm-delete" class="modal-btn"> Delete</button>
+                </div>
+            </div>
+        </div>
+        <!-- end of main -->
+        <script src="Static/JS/room.js"></script>
+    </body>
+</html>

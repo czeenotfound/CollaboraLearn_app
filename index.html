@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="Static/CSS/main.css">
+        <!-- Icons Link -->
+        <link rel="stylesheet" href="Static/fontawesomeoffline/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="icon" href="Static/Pictures/icons8-study-96.png"/>
+        <title>CollaboraLearn</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div>
+                    <a href="index.html">
+                        <h2 class="log"><img src="Static/Pictures/icons8-study-96.png" alt="">CollaboraLearn</h2>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="search" placeholder="Search for peers...">
+                </div>
+                <div class="create">
+                    <label class="btn btn-primary" for="create-room">Create</label>
+                    <div class="nav-profile" onclick="toggle()">
+                        <div class="profile-pic">
+                            <a href="Profile.html"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt=""></a>
+                        </div>
+                        <p>Username <span>@username</span></p>
+                        <i class="fa-solid fa-angle-down "></i>
+                    </div>
+
+                    <ul class="profile-dropdown-list">
+                        
+                        <li class="profile-dropdown-list-item">
+                            <a href="Profile.html">
+                                <i class="fa-solid fa-user-pen"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+                        <hr>
+                        <li class="profile-dropdown-list-item">
+                            <a href="LoginPage.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <div class="left">
+                    <a href="Profile.html" class="profile">
+                        <div class="profile-pic">
+                            <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="">
+                        </div>
+                        <div class="handle">
+                            <h4>Username</h4>
+                            <p class="text-muted">
+                                @Username
+                            </p>
+                        </div>
+                    </a>
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <a href="#" class="menu-item active">
+                            <span><i class="fa fa-home"></i></span><h3>Home</h3>
+                        </a>
+                        <a href="#" class="menu-item" id="messages-notification">
+                            <span><i class="fa fa-inbox"><small class="notification-count"> 6</small></i></span><h3>Messages</h3>
+                        </a>
+                        <a href="#" class="menu-item" id="notifications">
+                           <span><i class="fa fa-envelope"><small class="notification-count"> 9+</small></i></span><h3>Notifications</h3>
+                           <!-- Notification popup -->
+                           <div class="notif-popup">
+                                <div>
+                                    <div class="profile-pic">
+                                    <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="">
+                                    </div>
+                                    <div class="notif-body">
+                                        <b>Username</b> commented on your room.
+                                        <small class="text-muted">2 MINUTES AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-pic">
+                                    <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="">
+                                    </div>
+                                    <div class="notif-body">
+                                        <b>Username</b> joined on your room.
+                                        <small class="text-muted">25 MINUTES AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-pic">
+                                    <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="">
+                                    </div>
+                                    <div class="notif-body">
+                                        <b>Username</b> created a room.
+                                        <small class="text-muted">3 DAYS AGO</small>
+                                    </div>
+                                </div>
+                           </div>
+                        </a>
+                        <a href="#" class="menu-item">
+                           <span><i class="fa fa-calendar"></i></span><h3>Calendar</h3>
+                        </a>
+                        <a href="#" class="menu-item">
+                            <span><i class="fa fa-star"></i></span><h3>Rate and Comments</h3>
+                        </a>
+                        <a href="#" class="menu-item">
+                            <span><i class="fa fa-question-circle"></i></span><h3>Help and Feedback</h3>
+                        </a>
+                    </div>
+                    <label for="create-room" class="btn btn-primary">Create Room</label>
+                    <!-- end of sidebar -->
+                </div>
+                <!-- end of left -->
+
+                <!-- MIDDLE -->
+                <div class="middle">
+                    <!-- Create Room -->
+                    <form class="create-room">
+                        <div class="profile-pic">
+                            <a href="Profile.html">
+                                <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="">
+                            </a>
+                        </div>
+                        <input type="text" placeholder="Create your study room" name="create-room" id="create-room">
+                        <label for="create-room" class="btn btn-primary">POST</label>
+                    </form>
+                    <!-- end of create room -->
+
+                    <!-- Browse Topics -->
+                    <div class="browse">
+                        <h3>Browse Topics</h3>
+                        <div class="browse-topics">
+                             <div class="left-arrow">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="browse-links">
+                                <ul>
+                                    <li><a href="#" class="active">All  <span>23</span></a></li>
+                                    <li><a href="#">Web Development <span>3</span></a></li>
+                                    <li><a href="#">History <span>2</span></a></li>
+                                    <li><a href="#">Python <span>5</span></a></li>
+                                    <li><a href="#">HTML <span>3</span></a></li>
+                                    <li><a href="#">Biology <span>6</span></a></li>
+                                    <li><a href="#">Frontend Framework <span>4</span></a></li>
+                                    <li><a href="#">More</a></li>
+                                </ul>
+                            </div>
+                            <div class="right-arrow active">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of browse topics -->
+                    
+                    <!-- Rooms -->
+                    <div class="rooms">
+                        <!-- first room -->
+                        <div class="room">
+                            <div class="photo">
+                                <img src="https://www.elegantthemes.com/blog/wp-content/uploads/2018/12/top11.png" alt="">
+                            </div>
+                            <div class="room-box">
+                                <div class="room_name">
+                                    <h3><a href="Room.html">HTML, CSS, JS</a></h3>
+                                    <p>Web Development</p>
+                                </div>
+                                <div class="head">
+                                    <div class="card-header">
+                                        <a href="Profile.html" class="user">
+                                            <div class="profile-pic">
+                                                <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h3>Username</h3>
+                                                <small>3 minutes ago</small>
+                                            </div>
+                                            
+                                        </a>
+                                        <span class="edit">
+                                            <div class="dropdown">
+                                                <button id="dropdown-button"><i class="fa-solid fa-ellipsis"></i></button>
+                                                <div id="dropdown-content">
+                                                    <a class="edit-button"><i class="fa-solid fa-edit"></i> Edit</a>
+                                                    <a class="delete-button"><i class="fa-solid fa-trash-can delete"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="liked-by">
+                                    <span><img src="https://randomuser.me/api/portraits/men/40.jpg"></span>
+                                    <span><img src="https://randomuser.me/api/portraits/men/10.jpg"></span>
+                                    <span><img src="https://randomuser.me/api/portraits/men/20.jpg"></span>
+                                    <p>People joined <b>Username</b> and <b>10 others</b></p>
+                                </div>    
+                            </div>
+                        </div>
+                        <!-- end of first room -->
+
+                        <!-- second room -->
+                        <div class="room">
+                            <div class="photo">
+                                <img src="https://images.saymedia-content.com/.image/t_share/MTczODIyOTM5NzIyOTUwMjgz/noli-me-tangere-and-el-filibusterismo.jpg" alt="">
+                            </div>
+                            <div class="room-box">
+                                <div class="room_name">
+                                    <h3><a href="Room.html">Life Works Of Rizal</a></h3>
+                                    <p>History</p>
+                                </div>
+                                <div class="head">
+                                    <div class="card-header">
+                                        <a href="Profile.html" class="user">
+                                            <div class="profile-pic">
+                                                <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h3>Username</h3>
+                                                <small>3 minutes ago</small>
+                                            </div>
+                                        </a>
+                                        <span class="edit">
+                                            <div class="dropdown">
+                                                <button id="dropdown-button"><i class="fa-solid fa-ellipsis"></i></button>
+                                                <div id="dropdown-content">
+                                                    <a href="#" class="edit-button"><i class="fa-solid fa-edit"></i> Edit</a>
+                                                    <a class="delete-button"><i class="fa-solid fa-trash-can delete"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="liked-by">
+                                    <span><img src="https://randomuser.me/api/portraits/men/40.jpg"></span>
+                                    <span><img src="https://randomuser.me/api/portraits/men/10.jpg"></span>
+                                    <span><img src="https://randomuser.me/api/portraits/men/20.jpg"></span>
+                                    <p>People joined <b>Username</b> and <b>24 others</b></p>
+                                </div>
+                            </div>
+                            <!-- <div class="action-buttons">
+                                <div class="interaction-buttons">
+                                    <span><i class="fa-regular fa-heart"></i></i></span>
+                                    <span><i class="fa-regular fa-comment"></i></i></span>
+                                    <span><i class="fa-regular fa-share-square"></i></i></span>
+                                </div>
+                                
+                                <div class="bookmark">
+                                    <span><i class="fa-regular fa-bookmark"></i></i></span>
+                                </div>
+                            </div> -->
+                            
+                            <!-- <div class="comments text-muted">View all 102 comments</div> -->
+                        </div>
+                        <!-- end of second room -->
+
+                        <!-- third room -->
+                        <div class="room">
+                            <div class="photo">
+                                <img src="https://d1wrxu8gicsgam.cloudfront.net/wp-content/files/django-logo-big.jpg" alt="">
+                            </div>
+                            <div class="room-box">
+                                <div class="room_name">
+                                    <h3><a href="Room.html">Django</a></h3>
+                                    <p>Python</p>
+                                </div>
+                                <div class="head">
+                                    <div class="card-header">
+                                        <a href="Profile.html" class="user">
+                                            <div class="profile-pic">
+                                                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h3>Username</h3>
+                                                <small>3 minutes ago</small>
+                                            </div>
+                                            
+                                        </a>
+                                        <span class="edit">
+                                            <div class="dropdown">
+                                                <button id="dropdown-button"><i class="fa-solid fa-ellipsis"></i></button>
+                                                <div id="dropdown-content">
+                                                    <a href="#" class="edit-button"><i class="fa-solid fa-edit"></i> Edit</a>
+                                                    <a class="delete-button"><i class="fa-solid fa-trash-can delete"></i>Delete</a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="liked-by">
+                                    <span><img src="https://randomuser.me/api/portraits/men/40.jpg"></span>
+                                    <span><img src="https://randomuser.me/api/portraits/men/10.jpg"></span>
+                                    <span><img src="https://randomuser.me/api/portraits/men/20.jpg"></span>
+                                    <p>People joined <b>Username</b> and <b>14 others</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of third room -->
+                    </div>
+                    <!-- end of rooms -->
+                </div>
+                <!-- end of main middle -->
+
+                <!-- RIGHT -->
+                <div class="right">
+                    <div class="messages">
+                        <div class="heading">
+                            <h4>Messages</h4><i class="fa-solid fa-edit"></i>
+                        </div>
+                        <!-- Search bar-Right -->
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="search" placeholder="Search messages" id="message-search">
+                        </div>
+                        <!-- Messages Category -->
+                        <!-- <div class="category">
+                            <h6 class="active">Primary</h6>
+                            <h6>General</h6>
+                            <h6 class="message-requests">Requests(8)</h6>
+                        </div> -->
+                        <!-- Message -->
+                        <div class="message">
+                            <div class="profile-pic">
+                                <img src="https://randomuser.me/api/portraits/men/44.jpg">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Heisenberg</h5>
+                                <p class="text-bold">Just woke up bruh</p>
+                            </div>
+                        </div>
+                        <!-- Message -->
+                        <div class="message">
+                            <div class="profile-pic">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Pinkman</h5>
+                                <p class="text-muted">Hello!</p>
+                            </div>
+                        </div>
+                        <!-- Message -->
+                        <div class="message">
+                            <div class="profile-pic">
+                                <img src="https://randomuser.me/api/portraits/men/3.jpg">
+                            </div>
+                            <div class="message-body">
+                                <h5>Fring</h5>
+                                <p class="text-bold">3 new messages</p>
+                            </div>
+                        </div>
+                        <!-- end of messages -->
+                    </div>
+                        <!-- friend requests -->
+                    <div class="activities">
+                        <h4>Recent Activity</h4>
+                        <div class="activity-container">
+                            <div class="info">
+                                <div class="profile-pic">
+                                    <img src="https://randomuser.me/api/portraits/men/30.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h5><a href="Profile.html">Username</a></h5>
+                                    <p class="text-muted">
+                                        8 mutual friends
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="room-title">
+                                <p>Replied to post "<a href="Room.html">HTML, CSS, & JS</a>"</p>
+                                <div class="room-titleContent">
+                                    I’ll have to try this sometime. Really like this idea. Wanna talk about it? I ‘m....
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="bg-modal">
+            <div class="create-modal-content">
+                <div class="close">+</div>
+                <div class="create-room-form">
+                    <h3>Create your study room</h3>
+                    <form class="form" action="#">
+                        <div class="form__group">
+                            <label for="room_name">Room Name</label>
+                            <input id="room_name" name="room_name" type="text" placeholder="E.g. Web Development" />
+                        </div>
+                    </form>
+                    
+                    <div class="form__group">
+                        <label for="room_topic">Topic</label>
+                        <input required type="text" name="topic" id="room_topic" list="topic-list" />
+                        <datalist id="topic-list">
+                            <select id="room_topic">
+                                <option value="">Select your topic</option>
+                                <option value="Python">Python</option>
+                                <option value="Django">Django</option>
+                            </select>
+                        </datalist>
+                    </div>
+        
+        
+                    <div class="form__group">
+                        <label for="room_about">About</label>
+                        <textarea name="room_about" id="room_about" placeholder="Write about your study group..."></textarea>
+                    </div>
+                    <div class="form__action">
+                        <button class="btn btn-dark"><a  href="index.html">Cancel</a></button>
+                        <button class="btn btn-primary" type="submit">Create Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="edit-modal" class="editmodal">
+            <div class="room-modal-content">
+                <div class="create-room-form">
+                    <h3>Update study room</h3>
+                    <form class="form" action="#">
+                        <div class="form__group">
+                            <label for="room_name">Room Name</label>
+                            <input id="room_name" name="room_name" type="text" placeholder="E.g. Web Development" />
+                        </div>
+                    </form>
+                    
+                    <div class="form__group">
+                        <label for="room_topic">Topic</label>
+                        <input required type="text" name="topic" id="room_topic" list="topic-list" />
+                        <datalist id="topic-list">
+                            <select id="room_topic">
+                                <option value="">Select your topic</option>
+                                <option value="Python">Python</option>
+                                <option value="Django">Django</option>
+                            </select>
+                        </datalist>
+                    </div>
+        
+        
+                    <div class="form__group">
+                        <label for="room_about">About</label>
+                        <textarea name="room_about" id="room_about" placeholder="Write about your study group..."></textarea>
+                    </div>
+                    <div class="form__action">
+                        <button class="btn btn-dark" id="cancel-edit"><a  href="index.html">Cancel</a></button>
+                        <button class="btn btn-primary" type="submit" id="confirm-edit">Update Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="delete-modal" class="deletemodal">
+            <div class="modal-content">
+                <div class="logoClosure">
+                    <i class="fa-regular fa-trash-can deletelogo"></i>
+                </div>
+                <p>Are you sure you want to delete this room?</p><hr>
+                <div class="delete__action">
+                    <button id="cancel-delete" class="modal-btn btn-dark">Cancel</button>
+                    <button id="confirm-delete" class="modal-btn"> Delete</button>
+                </div>
+            </div>
+        </div>
+        <script src="Static/JS/index.js"></script>
+    </body>
+</html>
