@@ -1,0 +1,120 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#2C6E49;
+    overflow: hidden;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outsideBorder{
+    width: 500px;
+    padding: 30px 0;
+    background-color: #4C956C;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 20px rgba(0,0,0,0.2);
+}
+
+.branding-container{
+    padding: 0 70px;
+    text-align: center;
+}
+
+.quote{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+hr{
+    margin: 20px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px ;
+}
+
+.login-container{
+    width: 350px;
+    margin: 30px auto;
+    background-color: #FEFEE3;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+input{
+    font-size: 16px;
+    display: block;
+    width: 350px;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+input:focus{
+    border: 2px solid black;
+}
+
+.login{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-login{
+    width: 100%;
+    display: block;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4C956C;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-login:hover{
+    background-color: #3a7152;
+}
+
+.forgotpass{
+    margin-top: 15px;
+    display: block;
+    font-family: Arial;
+    font-size: 14px;
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+}
+
+.forgotpass:hover{
+    text-decoration: underline;
+}
+
+#signup{
+    text-decoration: none;
+    color: #8b8b8b;
+}
+
+#signup:hover{
+    text-decoration: underline;
+}

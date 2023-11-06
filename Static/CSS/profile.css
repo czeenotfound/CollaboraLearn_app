@@ -1,0 +1,357 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    /* Colors */
+    --color-white: #ffffff;
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: #2C6E49;
+    --color-secondary: #4C956C;
+    --color-tertiary: #D68C45;
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 60%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    /* Border  */
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+/* CSS for Profile page - different grid column */
+
+/* =================== Room Container ==================== */
+
+.profile-container{
+    width: 70%;
+    margin: 1rem auto;
+}
+
+/* adjust the grid on your preference */
+main .profile-container{
+    display: grid;
+    grid-template-columns: auto 15vw ;
+    column-gap: 2rem;
+    position: relative;
+}
+
+/* =================== Profile Main ==================== */
+
+.profile-container .profile-main{
+    text-align: justify;
+}
+
+/* .profile-container .profile-main .profile{
+    
+} */
+
+.profile .profile-header{
+    border-radius: var(--card-border-radius);
+    background-color: var(--color-white);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.profile-header .profilecard{
+   display: flex;
+   flex-direction: column;
+}
+  
+.profilecard h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.profilecard p {
+    font-weight: 500;
+}
+
+.profilecard .cover-pic{
+    overflow: hidden;
+    width: 100%;
+    height: 170px;
+    background-color: var(--color-secondary);
+    border-top-right-radius: var(--card-border-radius);
+    border-top-left-radius: var(--card-border-radius);
+    object-fit: cover;
+}
+
+.profile-header .profilecard small{
+    display: block;
+}
+
+
+.profile-header .profilecard .profile-pic{
+    z-index: 1;
+    margin-top: -125px;
+    position: relative;
+    width: 10.5rem;
+    height: 10.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-header .profilecard .profile-pic img{
+    border-radius: 50%;
+    border: 5px solid var(--color-white);
+}
+
+.profilecard .profile-info{
+    line-height: 2rem;
+    text-align: center;
+
+    display: block;
+}
+
+.profilecard .profile-info .stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    white-space: nowrap;
+}
+
+.profilecard .profile-info .stat .separator{
+    border-left: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
+    padding: 0 1rem;
+}
+
+.profilecard .profile-bio{
+    padding: var(--card-padding);
+}
+
+.profilecard .profile-bio h4{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.user-post{
+    margin-top: 1rem;
+}
+
+.user-post h4{
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-post .room{
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.user-post .room .room-box{
+    padding: var(--card-padding);
+}
+
+.user-post .room .room_name{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.user-post .room .room_name a:hover{
+    text-decoration: underline;
+}
+
+
+.user-post .room .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-post .room .head .card-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-post .room .user{
+    display: flex;
+    gap: 1rem;
+}
+
+.user-post .room .user .profile-pic{
+    width: 2.8rem;
+}
+
+.user-post .room .caption{
+    margin-top: 0.5rem;
+}
+
+.user-post .room .photo{
+    height: 150px;
+    overflow: hidden;
+    background-color: var(--color-light);
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+}
+
+
+.user-post .liked-by{
+    display: flex;
+}
+
+.user-post .liked-by span{
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+}
+
+.user-post .liked-by span:first-child{
+    margin: 0;
+}
+
+.user-post .liked-by p{
+    margin-left: 0.5rem;
+}
+
+/* End of Profile Main */
+
+/* Profile Right */
+
+.profile-right .preference-container{
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin-bottom: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-right .preference-container .cover-pic{
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+    background-color: var(--color-primary);
+    border-top-right-radius: var(--card-border-radius);
+    border-top-left-radius: var(--card-border-radius);
+    object-fit: cover;
+}
+
+.profile-right .preference-container .preference{
+    display: block;
+    padding: var(--card-padding);
+}
+
+.profile-right .preference-container .preference h3{
+    text-align: left;
+}
+
+.profile-right .preference-container .middle{
+    margin: 1rem 0;
+}
+
+.profile-right .preference-container .preference ul{
+    padding: 1rem 2rem;
+    background-color: var(--color-light);
+    border-radius: var(--card-border-radius);
+    margin-top: 0.5rem;
+}
+
+.profile-right .preference-container .preference li{
+    list-style:square ;
+}
+
+.profile-right .preference-container .preference p{
+    line-height: 2rem;
+}
+
+.profile-right h4{
+    color: var(--color-gray);
+    margin-bottom: 1rem;
+}
+
+.profile-right .activity-container{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-bottom: 0.7rem;
+}
+
+.profile-right .activity-container .info{
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-right .activity-container .info .profile-pic{
+    margin-bottom: 1rem;
+}
+
+.profile-right .activity-container .room-title a:hover{
+    text-decoration: underline;
+}
+
+.profile-right .activity-container .room-titleContent{
+    display: flex;
+    background-color: var(--color-light);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+}
+
+
+/* ============================
+Media Queries for small laptops and big tablets
+===============================
+ */
+
+ @media screen and (max-width:1200px) {
+    .profile-container{
+        width: 90%;
+    }
+
+    main .profile-container{
+        grid-template-columns: auto 20vw;
+        gap: 1rem;
+    }
+
+    .editprofilemodal .profile-modal-content{
+        width: 40vw;
+    }
+
+ }
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+/* =============== MEDIA QUERIES ================ */
+
+@media screen and (max-width: 992px) {
+    /* ============== Room Main ================== */
+    .profile-container{
+        width: 90%;
+    }
+
+    /* ============== Room Left ================== */
+    main .profile-container{
+        grid-template-columns: auto;
+    }
+
+    
+    .profile-right{
+        display: none;
+    }
+}
