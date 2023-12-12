@@ -258,4 +258,7 @@ profileForm.addEventListener("submit", (e) => {
     const availability = document.getElementById("availability").value;
 
     editProfileModal.style.display = "none";
+
+
+    
 });

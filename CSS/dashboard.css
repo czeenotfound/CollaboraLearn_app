@@ -1,0 +1,564 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    /* Colors */
+    --color-white: #ffffff;
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: #2C6E49;
+    --color-secondary: #4C956C;
+    --color-tertiary: #D68C45;
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 60%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    /* Border  */
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+a{
+    color: white;
+}
+
+body{
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-light);
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-subjects{
+
+    color: var(--color-white);
+}
+
+.btn-primary{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-delete{
+    background-color: var(--color-danger);
+    color: var(--color-white)
+}
+
+.btn-dark{
+    background-color: var(--color-dark);
+    color: white;
+}
+
+hr{
+    margin: 10px 15px;
+}
+
+.container{
+    display: flex;
+}
+
+/* Side Nav-Bar */
+#VerticalNav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: #2C6E49;
+    padding: 20px 0;
+    width: 250px;
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.5);
+}
+
+#logo{
+    margin: 0 10px;
+    text-align: center;
+}
+
+#logo #brandicon{
+    width: 45px;
+    border-radius: 50%;
+}
+
+#logo .brandname{
+    width: 200px;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.profile{
+    padding: var(--card-padding);
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    height: 10vh;
+}
+
+.profile-pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    width: 4.375rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic img{
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: var(--color-white);
+}
+
+img{
+    width: 100%;
+}
+
+.profile{
+    padding: var(--card-padding);
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.pop{
+    position: relative;
+    color: #ffffff;
+    font-size: 14px;
+    display: table;
+    width: 250px;
+    height: 50px;
+    padding: 20px 0 20px 0;
+    transition: 0.5s;
+}
+
+nav .i{
+    width: 75px;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    margin-left: 10px;
+}
+
+nav .popout{
+    background-color: #4C956C;
+    width: 260px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.pop:hover{
+    background-color: #4C956C;
+    width: 260px;
+    font-size: 1em;
+    font-weight: bold;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.logout{
+    color: #ffffff;
+    font-size: 14px;
+    display: table;
+    width: 250px;
+    height: 50px;
+    padding: 20px 0 20px 0;
+    transition: 0.5s;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.logout:hover{
+    background-color: #4C956C;
+    width: 260px;
+    font-size: 1em;
+    font-weight: bold;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Horizontal Nav-Bar */
+#horizontalNav{
+    width: 100%;
+    height: 130px;
+    padding-left: 220px;
+    background-color: #4C956C;
+    text-align: center;
+    top: 0;
+}
+
+
+.searchbar{
+    width: 330px;
+    margin: 30px 0px 30px 50px;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 3px solid rgba(154, 154, 154, 0.5);
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+.searchbar:focus{
+    border: 2px solid black;
+    width: 400px;
+}
+
+/* Main Section */
+
+.main{
+    width: 80%;
+    margin-left: 270px;
+    position: absolute;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+    color: var(--color-dark)
+}
+
+.header_container{
+    padding: 70px 20px 20px 20px;
+    text-align: justify;
+    font-size: 1em;
+    background-color: #D68C45;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+
+.main-course{
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+
+.main-course h1{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.main-course h2{
+    font-size: 3rem;
+}
+
+.course-box{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.course-box .course{
+    max-height: 40rem; /* Set your desired max height */
+    overflow: auto; 
+}
+
+.course-box .course::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.course-box .course::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+.course-box .course::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.form__group {
+    display: flex;
+    width: 50%;
+    margin: 5vh auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form__group .success-messages li{
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    color: var(--color-black);
+    background-color:  rgb(170, 214, 181);
+}
+
+
+.main .success-messages li{
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    color: var(--color-black);
+    background-color:  rgb(170, 214, 181);
+}
+
+.form__group .messages li{
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    color: #cd1532;
+    background-color: #ffdbe3;
+}
+
+.form__group .currentmessages li{
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    color: #3115cd;
+    background-color: #dddbff;
+}
+
+.form__group input {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    border-radius: var(--card-border-radius);
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.form__group select{
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    border-radius: var(--card-border-radius);
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.form__group textarea{
+    display: block;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    border: 1px solid rgba(0,0,0,0.2);
+    margin: 1rem 0;
+    height: 15vh;
+    width: 100%;
+}
+
+.form__group button {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: var(--card-padding);
+    width: 100%;
+}
+
+.form__group hr {
+    margin: 15px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.form__group a {
+    color: white;
+    text-decoration: none;
+}
+
+.form__group .btn-login {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form__group .btn-login:hover {
+    background-color: #2980b9;
+}
+
+.course-box ul{
+    list-style: none;
+    display: flex;
+}
+
+.course-box ul li{
+    margin: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.course-box ul .active{
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.course-box .course{
+    display: flex;
+}
+
+.box{
+    width: 33%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(235, 233, 233);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.box p{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.box button{
+    border-radius: var(--card-border-radius);
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.box button:hover{
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.box i{
+    font-size: 7rem;
+    float: right;
+    margin: -20px 20px 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 1rem;
+}
+
+th, td {
+    border: 3px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    text-align: center;
+    white-space: nowrap;
+    padding: 1rem;
+    background-color: #f2f2f2;
+}
+
+.actions{
+    text-align: center;
+}
+
+.edit, .delete {
+    cursor: pointer;
+
+}
+
+.edit:hover, .delete:hover {
+    background-color: #ddd;
+}
+
+@media only screen and (max-width: 1100px) {
+    #VerticalNav {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #menu-icon i {
+        cursor: pointer;
+    }
+
+    .main{
+        margin: 0;
+        width: 100%;
+    }
+}
