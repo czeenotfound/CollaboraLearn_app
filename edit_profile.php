@@ -55,7 +55,7 @@
                         <input type="hidden" name="previous_avatar_name" value="<?= $user['avatar'] ?>">
                         <input type="file" name="user_avatar" id="avatar" value="<?= $user['avatar'] ?>">
 
-
+                        <button class="btn btn-dark"><a href="index.php">Cancel</a><button>
                         <button type="submit" class="btn btn-primary" name="submit" target="_self"><a>Edit Profile</a></button>
                     </form>
                 </div>

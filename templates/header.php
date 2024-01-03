@@ -74,7 +74,6 @@
                             </div>
                         </form>
                         <li><a href="<?= ROOT_URL ?>"><i class="fa fa-home"></i></span></a></li>
-                        <li><a href="#"><i class="fa fa-calendar"></i></a></li>
                     </ul>
                 </div>
                 <div class="create">

@@ -1,0 +1,44 @@
+--
+-- Create model User
+--
+CREATE TABLE "baseapp_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(150) NOT NULL, "last_name" varchar(150) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NULL UNIQUE, "bio" text NULL, "avatar" varchar(100) NULL);
+CREATE TABLE "baseapp_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" bigint NOT NULL REFERENCES "baseapp_user" ("id") DEFERRABLE INITIALLY DEFERRED, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE TABLE "baseapp_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" bigint NOT NULL REFERENCES "baseapp_user" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED);
+--
+-- Create model Topic
+--
+CREATE TABLE "baseapp_topic" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(200) NOT NULL);
+--
+-- Create model Room
+--
+CREATE TABLE "baseapp_room" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(200) NOT NULL, "description" text NULL, "updated" datetime NOT NULL, "created" datetime NOT NULL, "host_id" bigint NULL REFERENCES "baseapp_user" ("id") DEFERRABLE INITIALLY DEFERRED, "topic_id" bigint NULL REFERENCES "baseapp_topic" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE TABLE "baseapp_room_participants" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "room_id" bigint NOT NULL REFERENCES "baseapp_room" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "baseapp_user" ("id") DEFERRABLE INITIALLY DEFERRED);
+--
+-- Create model Message
+--
+CREATE TABLE "baseapp_message" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "body" text NOT NULL, "updated" datetime NOT NULL, "created" datetime NOT NULL, "room_id" bigint NOT NULL REFERENCES "baseapp_room" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" bigint NOT NULL REFERENCES "baseapp_user" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE UNIQUE INDEX "baseapp_user_groups_user_id_group_id_6131f276_uniq" ON "baseapp_user_groups" ("user_id", "group_id");
+CREATE INDEX "baseapp_user_groups_user_id_3981554a" ON "baseapp_user_groups" ("user_id");
+CREATE INDEX "baseapp_user_groups_group_id_b8ce335e" ON "baseapp_user_groups" ("group_id");
+CREATE UNIQUE INDEX "baseapp_user_user_permissions_user_id_permission_id_0c6a8936_uniq" ON "baseapp_user_user_permissions" ("user_id", "permission_id");
+CREATE INDEX "baseapp_user_user_permissions_user_id_85e74c81" ON "baseapp_user_user_permissions" ("user_id");
+CREATE INDEX "baseapp_user_user_permissions_permission_id_8210b75c" ON "baseapp_user_user_permissions" ("permission_id");
+CREATE INDEX "baseapp_room_host_id_f5091290" ON "baseapp_room" ("host_id");
+CREATE INDEX "baseapp_room_topic_id_c307598c" ON "baseapp_room" ("topic_id");
+CREATE UNIQUE INDEX "baseapp_room_participants_room_id_user_id_0676d36f_uniq" ON "baseapp_room_participants" ("room_id", "user_id");
+CREATE INDEX "baseapp_room_participants_room_id_3844acdc" ON "baseapp_room_participants" ("room_id");
+CREATE INDEX "baseapp_room_participants_user_id_70cdaad9" ON "baseapp_room_participants" ("user_id");
+CREATE INDEX "baseapp_message_room_id_3e0033cf" ON "baseapp_message" ("room_id");
+CREATE INDEX "baseapp_message_user_id_722776b8" ON "baseapp_message" ("user_id");
+COMMIT;
+
+CREATE TABLE baseapp_messages (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    body TEXT NOT NULL,
+    updated DATETIME NOT NULL,
+    created DATETIME NOT NULL,
+    room_id INT NOT NULL,
+    user_id INT NOT NULL,
+    INDEX baseapp_message_room_id (room_id),
+    INDEX baseapp_message_user_id (user_id)
+);

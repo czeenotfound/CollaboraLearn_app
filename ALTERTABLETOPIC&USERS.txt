@@ -1,0 +1,7 @@
+ALTER TABLE baseapp_rooms ADD CONSTRAINT FK_collaboralearn_topic
+FOREIGN KEY (topic_id) REFERENCES baseapp_topics (id) ON DELETE SET NULL;
+
+ALTER TABLE baseapp_rooms ADD CONSTRAINT FK_collaboralearn_host
+FOREIGN KEY (host_id) REFERENCES baseapp_users (id) ON DELETE CASCADE;
+
+for referencing the data (topic and host) id's from baseapp_topics and baseapp_users
